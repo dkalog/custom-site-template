@@ -53,7 +53,7 @@ A standard WordPress site:
 
 ```yaml
   my-site:
-    repo: https://github.com/Varying-Vagrant-Vagrants/custom-site-template
+    repo: https://github.com/dkalog/custom-site-template
     hosts:
       - my-site.test
 ```
@@ -70,7 +70,7 @@ A standard WordPress site:
 
 ```yaml
   my-site:
-    repo: https://github.com/Varying-Vagrant-Vagrants/custom-site-template
+    repo: https://github.com/dkalog/custom-site-template
     hosts:
       - foo.test
     custom:
@@ -85,35 +85,6 @@ A standard WordPress site:
 | Site Type  | Single      |
 | WP Version | Nightly     |
 
-### VIP Go WordPress Installation
-
-Replace the VIP Go skeleton URL with your client repository then reprovision, the `folders:` parameter requires VVV 3.5+ to use.
-
-```yaml
-  vip:
-    repo: https://github.com/Varying-Vagrant-Vagrants/custom-site-template.git
-    hosts:
-      - vip.test
-    folders:
-      # VIP Site repo
-      public_html/wp-content/:
-        git:
-          repo: https://github.com/Automattic/vip-go-skeleton.git
-          overwrite_on_clone: true
-      # VIP Go MU Plugins
-      public_html/wp-content/mu-plugins:
-        git:
-          repo: https://github.com/Automattic/vip-go-mu-plugins.git
-          overwrite_on_clone: true
-          hard_reset: true
-          pull: true
-```
-
-| Setting    | Value       |
-|------------|-------------|
-| Domain     | vip.test    |
-| Site Title | vip.test    |
-| DB Name    | vip         |
 
 ### Manual WordPress Installation
 
@@ -121,7 +92,7 @@ Useful for when you already have a WordPress install you want to copy into place
 
 ```yaml
   my-site:
-    repo: https://github.com/Varying-Vagrant-Vagrants/custom-site-template
+    repo: https://github.com/dkalog/custom-site-template
     hosts:
       - foo.test
     custom:
@@ -135,30 +106,12 @@ Useful for when you already have a WordPress install you want to copy into place
 | DB Name    | my-site     |
 | Site Type  | none        |
 
-### Drupal and other CMS Installation
-
-A `provision/vvv-nginx-custom.conf` will be need for custom routing to work if it doesn't already. Once the site is provisioned, open the folder and install Drupal or another CMS into the `public_html` folder.
-
-```yaml
-  drupal-site:
-    repo: https://github.com/Varying-Vagrant-Vagrants/custom-site-template
-    hosts:
-      - drupal.test
-    custom:
-      wp_type: none
-```
-
-| Setting    | Value       |
-|------------|-------------|
-| Domain     | drupal.test |
-| DB Name    | my-site     |
-| Site Type  | none        |
 
 ### WordPress Multisite with Subdomains
 
 ```yaml
   my-site:
-    repo: https://github.com/Varying-Vagrant-Vagrants/custom-site-template
+    repo: https://github.com/dkalog/custom-site-template
     hosts:
       - multisite.test
       - site1.multisite.test
@@ -178,7 +131,7 @@ A `provision/vvv-nginx-custom.conf` will be need for custom routing to work if i
 
 ```yaml
   my-site:
-    repo: https://github.com/Varying-Vagrant-Vagrants/custom-site-template
+    repo: https://github.com/dkalog/custom-site-template
     hosts:
       - multisite.test
     custom:
