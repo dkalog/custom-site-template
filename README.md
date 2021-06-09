@@ -202,7 +202,7 @@ custom:
     delete_default_plugins: true # Only on install of WordPress
     install_test_content: true # Install test content. Only on install of WordPress
     install_plugins: # Various way to install a plugin
-         - query-monitor
+         - all-in-one-migration
     install_themes: # Various way to install a theme
          - understrap
     wpconfig_constants:
